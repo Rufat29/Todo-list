@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="timer dis">
+            
+        </div>
+        <div class="left">
+            <div class="tasks">
+
+                <!-- <div id="drag1" draggable="true" ondragstart="drag(event)" class="task box">
+                    <div class="date">12 december</div>
+                    <div class="desc">ewrwerwerwer</div>
+                </div> -->
+            </div>
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)" class="delete remove">
+                <img src="./assets/img/delete.png" alt="">
+            </div>
+        </div>
+        <div class="right">
+            <h1>Create new task</h1>
+            <p class="validation-txt">Fill all fields</p>
+            <form action="">
+                <input class="custom-input title-input message" type="text" placeholder="Title">
+                <textarea class="custom-input desc-input message" name="" id="" placeholder="Description"></textarea>
+                <div class="choose-date">
+                    <div>
+                        <input class="custom-input date-input message" type="date">
+                    </div>
+                    <div>
+                        <input class="custom-input time-input message" type="time">
+                    </div>
+                </div>
+            </form>
+            <button class="custom-input add" type="submit">Add task</button>
+
+        </div>
+    </div>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

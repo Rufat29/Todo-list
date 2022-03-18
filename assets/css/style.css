@@ -1,0 +1,207 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none ;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.container .timer{
+    width: 50%;
+    height: 50vh;
+    margin: auto;
+    z-index: 999;
+    background-color: #f18f01;
+    transition: .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 2px solid #2f2d2e;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.container .timer .modal-title{
+    font-size: 25px;
+    font-weight: bold;
+}
+.container .timer .exit{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 20px 0 0;
+    z-index: 99;
+    background-color: #2f2d2e;
+    color: #f18f01;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.dis{
+    position: absolute;
+    transform: translate(-50%,-100%);
+    top: 0px;
+    left: 50%;
+}
+ .active{
+     position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+}
+.left{
+    background-color: #2f2d2e;
+    height: 100vh;
+    width: 60%;
+    overflow-y: auto;
+}
+.left .delete{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 10px;
+    cursor: pointer;
+}
+.left .delete img{
+    width: 35px;
+    object-fit: cover;
+}
+.left .task{
+    width: 80%;
+    height: 100px;
+    display: flex;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    background-color: #f18f01;
+    border: 5px solid #f18f01;
+    margin: 15px auto;
+    cursor: pointer;
+}
+.left .task .date{
+    background-color: #2f2d2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: #f18f01;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    width: 40%;
+}
+.left .task .desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+#demo{
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#demo span{
+    font-size: 16px;
+    border-right: 1px solid #2f2d2e;
+    background-color: #2f2d2e;
+    color: #f18f01;
+    padding: 10px;
+    text-align: center;
+    width: 25%;
+    border-right:1px solid #f18f01 ;
+}
+
+.right{
+    background-color: #f18f01;
+    height: 100vh;
+    width: 40%;
+    text-align: center;
+    padding: 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right h1{
+    color: #fff;
+    background-color: #2f2d2e;
+    padding:10px 20px;
+    border-radius: 10px;
+}
+.right .custom-input{
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 15px;
+}
+.right .custom-input:focus{
+    border: 1px solid #2f2d2e;
+}
+.right input{
+    width: 100%;
+    height: 40px;
+}
+.right textarea{
+    width: 100%;
+    height: 120px;
+}
+.right .validation-txt{
+    text-align: left;
+    color:#2f2d2e;
+    margin-top: 10px;
+    display: none;
+}
+.choose-date{
+    display: flex;
+    justify-content: space-between;
+}
+.choose-date div{
+    width: 45%;
+}
+.choose-date input{
+    width: 100%;
+}
+.right button{
+    width: 100%;
+    height: 45px;
+    background-color: #2f2d2e;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.right button:hover{
+     background-color: #f18f01;
+     color: #2f2d2e;
+     border: 1px solid #2f2d2e;
+}
+
+@media only screen and (max-width:768px) {
+    .container{
+        flex-direction: column-reverse;
+    }
+    .left{
+        width: 100%;
+    }
+    .right{
+        width: 100%;
+    }
+    .timer{
+        width: 100% !important;
+    }
+}
